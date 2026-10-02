@@ -1,0 +1,34 @@
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/instrument-sans";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 237 241 246;
+  --surface: 248 250 252;
+  --ink: 16 35 58;
+  --muted: 80 98 120;
+  --line: 207 215 226;
+  --accent: 45 91 227;
+  --pass: 22 140 94;
+  --heal: 190 110 10;
+}
+.dark {
+  --bg: 14 27 46;
+  --surface: 21 38 63;
+  --ink: 232 238 246;
+  --muted: 160 175 196;
+  --line: 44 63 92;
+  --accent: 124 160 255;
+  --pass: 74 201 150;
+  --heal: 240 170 70;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-bg font-sans text-ink antialiased; }
+h1, h2, h3 { @apply font-display; }
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
